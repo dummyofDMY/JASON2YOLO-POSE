@@ -84,7 +84,7 @@ def convert_labelme_annotations(labelme_json_path, output_dir, class_names:dict,
                 
                 # YOLO-Pose格式: class x y w h kpt1_x kpt1_y kpt2_x kpt2_y ...
                 now_pt_class = shape['label']
-                kpt_array[kpt_idx[now_pt_class], :] = [x, y, 1]
+                kpt_array[kpt_idx[now_pt_class], :] = [x, y, 2]
             elif shape['shape_type'] == 'rectangle':
                 pt1 = shape['points'][0]
                 pt2 = shape['points'][1]
